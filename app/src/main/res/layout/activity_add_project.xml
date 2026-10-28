@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background" android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <TextView style="@style/App.Section" android:text="Basics" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Project title *">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etTitle" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="One-line summary (shown on the flashcard)">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etTagline" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/App.Field.Dropdown" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Category">
+                <AutoCompleteTextView android:id="@+id/etCategory" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Overview - what is this project?">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textMultiLine|textCapSentences" android:minLines="3" android:gravity="top|start" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView style="@style/App.Section" android:text="Flashcard story" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Problem - what issue did you solve?">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProblem" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textMultiLine|textCapSentences" android:minLines="3" android:gravity="top|start" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Solution - how did you solve it?">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSolution" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textMultiLine|textCapSentences" android:minLines="3" android:gravity="top|start" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Your role (e.g. Team lead, Backend developer)">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etRole" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Outcome / impact (users, accuracy, award...)">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etOutcome" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textMultiLine|textCapSentences" android:minLines="3" android:gravity="top|start" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView style="@style/App.Section" android:text="Tech and links" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Technologies used (Kotlin, Firebase...)">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etTech" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="GitHub repository link">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etGithub" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textUri" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Live demo / video link">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etDemo" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textUri" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Report / PDF link (Google Drive etc.)">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPdfLink" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textUri" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:id="@+id/tvPdfStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="No PDF attached" android:textColor="@color/text_secondary" />
+            <Button android:id="@+id/btnPickPdf" style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Attach project PDF (up to 700 KB)" />
+            <Button android:id="@+id/btnSaveProject" android:layout_width="match_parent" android:layout_height="56dp"
+                android:layout_marginTop="20dp" android:text="Save Project" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

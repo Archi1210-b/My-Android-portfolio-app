@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/projectCard"
+    style="@style/App.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradient"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView android:id="@+id/tvCCategory"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:letterSpacing="0.12" android:textAllCaps="true"
+                android:textColor="@color/accent" android:textSize="11sp" android:textStyle="bold" />
+            <TextView android:id="@+id/tvCTitle"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" android:textColor="@color/white"
+                android:textSize="22sp" android:textStyle="bold" />
+            <TextView android:id="@+id/tvCTagline"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:textColor="#E6FFFFFF" android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp" android:paddingEnd="18dp"
+            android:paddingTop="4dp" android:paddingBottom="16dp">
+
+            <LinearLayout android:id="@+id/boxOverview" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/App.CardLabel" android:text="ABOUT THE PROJECT" />
+                <TextView android:id="@+id/tvCOverview" style="@style/App.CardText" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/boxTech" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/App.CardLabel" android:text="TECH STACK" />
+                <TextView android:id="@+id/tvCTech" style="@style/App.CardText"
+                    android:textColor="@color/primary_dark" android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/boxProblem" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/App.CardLabel" android:text="PROBLEM" />
+                <TextView android:id="@+id/tvCProblem" style="@style/App.CardText" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/boxSolution" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/App.CardLabel" android:text="SOLUTION" />
+                <TextView android:id="@+id/tvCSolution" style="@style/App.CardText" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/boxRole" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/App.CardLabel" android:text="MY ROLE" />
+                <TextView android:id="@+id/tvCRole" style="@style/App.CardText" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/boxOutcome" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/App.CardLabel" android:text="OUTCOME / IMPACT" />
+                <TextView android:id="@+id/tvCOutcome" style="@style/App.CardText" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/boxLinks" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/App.CardLabel" android:text="LINKS" />
+                <TextView android:id="@+id/tvCLinks" style="@style/App.CardText"
+                    android:autoLink="web" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView android:id="@+id/tvCOwner"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@color/primary_light" android:gravity="center"
+            android:padding="10dp" android:textColor="@color/primary_dark" android:textSize="11sp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

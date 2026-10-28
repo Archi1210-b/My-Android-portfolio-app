@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background" android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <TextView android:id="@+id/tvEmpty" android:layout_width="match_parent" android:layout_height="match_parent"
+        android:gravity="center" android:visibility="gone"
+        android:text="🃏\nNo projects yet.\nAdd a project to see its flashcard."
+        android:textColor="@color/text_secondary" android:textSize="15sp" />
+
+    <LinearLayout android:id="@+id/flashContent" android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:padding="12dp">
+
+        <TextView android:id="@+id/tvCounter" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:textColor="@color/text_secondary" android:textStyle="bold" />
+
+        <ScrollView android:id="@+id/cardScroll" android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+            android:clipToPadding="false" android:padding="4dp">
+            <include layout="@layout/view_project_card"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </ScrollView>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/btnPrev" style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginEnd="6dp" android:text="←  Previous" />
+            <Button android:id="@+id/btnNext" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="6dp" android:text="Next  →" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/btnFShare" style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:paddingStart="2dp" android:paddingEnd="2dp" android:text="Share card" android:textSize="12sp" />
+            <Button android:id="@+id/btnFGithub" style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:paddingStart="2dp" android:paddingEnd="2dp" android:text="GitHub" android:textSize="12sp" />
+            <Button android:id="@+id/btnFDemo" style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:paddingStart="2dp" android:paddingEnd="2dp" android:text="Demo" android:textSize="12sp" />
+            <Button android:id="@+id/btnFPdf" style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:paddingStart="2dp" android:paddingEnd="2dp" android:text="PDF" android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

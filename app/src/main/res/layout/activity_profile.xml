@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background" android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" android:gravity="center_horizontal" android:orientation="vertical">
+                <FrameLayout android:layout_width="96dp" android:layout_height="96dp">
+                    <TextView android:id="@+id/tvInitials"
+                        android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:background="@drawable/bg_avatar" android:gravity="center" android:text="?"
+                        android:textColor="@color/primary" android:textSize="34sp" android:textStyle="bold" />
+                    <com.google.android.material.imageview.ShapeableImageView android:id="@+id/imgPhoto"
+                        android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:scaleType="centerCrop" android:visibility="gone"
+                        app:shapeAppearanceOverlay="@style/CircleImage" />
+                </FrameLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:id="@+id/btnChangePhoto" style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Change photo" />
+                    <Button android:id="@+id/btnRemovePhoto" style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Remove" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/App.Section" android:text="Basic information" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Full name">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etName" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Headline (e.g. Android Developer | B.Tech CSE)">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etHeadline" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="College / University">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCollege" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Branch / Course">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etBranch" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Graduation year">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etGradYear" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="CGPA">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCgpa" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView style="@style/App.Section" android:text="Contact" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Phone number">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="City / Location">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etLocation" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView style="@style/App.Section" android:text="About you" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Short bio and career goals">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etBio" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textMultiLine|textCapSentences" android:minLines="3" android:gravity="top|start" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Skills, separated by commas (Java, SQL, Kotlin)">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSkills" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textMultiLine|textCapSentences" android:minLines="3" android:gravity="top|start" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView style="@style/App.Section" android:text="Links" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="GitHub profile link">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etGithub" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textUri" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="LinkedIn profile link">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etLinkedin" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textUri" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView style="@style/App.Section" android:text="Resume" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/App.Field" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Resume link (Google Drive etc.) - optional">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etResumeLink" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textUri" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:id="@+id/tvResumeStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="No resume PDF uploaded yet" android:textColor="@color/text_secondary" android:layout_marginBottom="4dp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="PDF up to 700 KB can be uploaded directly." android:textColor="@color/text_secondary" android:textSize="12sp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnUploadResume" style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Upload PDF" />
+                <Button android:id="@+id/btnViewResume" style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="View" android:visibility="gone" />
+                <Button android:id="@+id/btnShareResume" style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Share" android:visibility="gone" />
+            </LinearLayout>
+            <Button android:id="@+id/btnSave" android:layout_width="match_parent" android:layout_height="56dp"
+                android:layout_marginTop="20dp" android:text="Save Profile" />
+            <Button android:id="@+id/btnSaveNext" style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="8dp"
+                android:text="Save &amp; Add a Project  →" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
