@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Personal portfolio showcasing skills, projects and experience.">
+  <title>My Portfolio | Developer</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      background: #0b1020;
+      color: #edf1ff;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1060px, 90%); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: #0b1020ee; backdrop-filter: blur(12px);
+      border-bottom: 1px solid #ffffff14;
+    }
+    nav {
+      min-height: 72px; display: flex; align-items: center;
+      justify-content: space-between; gap: 20px;
+    }
+    .logo { font-size: 1.25rem; font-weight: 800; }
+    .logo span, .accent { color: #8b9dff; }
+    .links { display: flex; gap: 22px; flex-wrap: wrap; }
+    .links a { color: #b9c2dc; font-size: .9rem; }
+    .links a:hover { color: white; }
+    .hero {
+      min-height: 76vh; display: flex; align-items: center;
+      padding: 80px 0;
+      background: radial-gradient(ellipse at 85% 30%, #5145a833, transparent 45%);
+    }
+    .eyebrow { color: #a6b2ff; font-weight: 700; letter-spacing: 2px; font-size: .78rem; text-transform: uppercase; }
+    h1 { font-size: clamp(2.8rem, 7vw, 5.3rem); line-height: 1.08; letter-spacing: -2px; margin: 18px 0; }
+    .hero p { color: #aeb8d2; max-width: 620px; font-size: 1.08rem; }
+    .buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+    .btn {
+      display: inline-block; padding: 12px 20px; border-radius: 10px;
+      font-weight: 700; border: 1px solid #ffffff24;
+    }
+    .primary { background: #7788ff; color: #0b1020; border-color: #7788ff; }
+    .btn:hover { transform: translateY(-2px); }
+    section { padding: 76px 0; }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 10px; }
+    .sub { color: #aeb8d2; margin-bottom: 30px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      background: #131b30; border: 1px solid #ffffff12;
+      border-radius: 16px; padding: 24px;
+    }
+    .card h3 { margin-bottom: 10px; }
+    .card p { color: #aeb8d2; font-size: .95rem; }
+    .icon { font-size: 1.6rem; margin-bottom: 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag {
+      border: 1px solid #7788ff44; color: #c5ceff;
+      background: #7788ff12; border-radius: 30px;
+      padding: 7px 14px; font-size: .9rem;
+    }
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+    .about p { color: #aeb8d2; }
+    .contact { text-align: center; background: #121a2d; border-radius: 20px; padding: 42px 20px; }
+    footer { padding: 26px 0; border-top: 1px solid #ffffff14; color: #8792ad; font-size: .9rem; }
+    footer .container { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+    @media (max-width: 700px) {
+      nav { padding: 14px 0; align-items: flex-start; flex-direction: column; }
+      .links { gap: 14px; }
+      .grid, .about { grid-template-columns: 1fr; }
+      .hero { min-height: auto; padding: 85px 0; }
+      section { padding: 55px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">My<span>.</span>Portfolio</a>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">Welcome to my portfolio</div>
+        <h1>Hi, I'm <span class="accent">Your Name.</span><br>Developer &amp; Creator.</h1>
+        <p>
+          I build useful digital experiences through technology, creativity
+          and continuous learning. Explore my skills and the projects I've
+          been working on.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#projects">Explore my work ↗</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about">
+        <div>
+          <div class="eyebrow">A little about me</div>
+          <h2 class="section-title">Turning ideas into reality.</h2>
+        </div>
+        <div>
+          <p>
+            I'm a technology enthusiast who enjoys solving problems and
+            building applications. I am passionate about learning new tools,
+            improving my skills and creating projects that make a difference.
+          </p>
+          <br>
+          <p>
+            This portfolio highlights my technical journey, selected projects
+            and the skills I'm developing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="eyebrow">What I work with</div>
+        <h2 class="section-title">My Skills</h2>
+        <p class="sub">Technologies and tools I use or am currently learning.</p>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">Kotlin</span>
+          <span class="tag">Android Studio</span>
+          <span class="tag">XML</span>
+          <span class="tag">HTML &amp; CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Git &amp; GitHub</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="eyebrow">Things I've built</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="sub">A selection of my work and learning experiences.</p>
+        <div class="grid">
+          <article class="card">
+            <div class="icon">📱</div>
+            <h3>Portfolio Android App</h3>
+            <p>A mobile portfolio application built with Android Studio. Showcases personal information, skills and projects.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🗂️</div>
+            <h3>Course File Management</h3>
+            <p>A project concept for organizing course documents, faculty resources and academic records.</p>
+          </article>
+          <article class="card">
+            <div class="icon">💡</div>
+            <h3>More Projects</h3>
+            <p>Add your other applications, hackathon projects or coursework here as your portfolio grows.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact">
+          <div class="eyebrow">Let's connect</div>
+          <h2 class="section-title">Have a project in mind?</h2>
+          <p class="sub">I'd love to connect and discuss ideas, projects and opportunities.</p>
+          <a class="btn primary" href="mailto:YOUR-EMAIL@example.com">Email me ↗</a>
+          <div class="buttons" style="justify-content:center">
+            <a class="btn" href="https://github.com/YOUR-USERNAME">GitHub profile ↗</a>
+            <a class="btn" href="https://www.linkedin.com/">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© <span id="year"></span> Your Name</span>
+      <span>Designed with care · Built for the web</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
